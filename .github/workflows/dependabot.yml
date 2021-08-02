@@ -23,6 +23,8 @@ permissions:
   contents: write
 
 jobs:
+  # This job ensures that "go mod tidy" is run for all Go modules included in
+  # this repository.
   tidy:
     name: Go tidiness for Dependabot PR
     # 'dependencies' and 'go' are the default labels used by Dependabot when updating Go dependencies
@@ -38,7 +40,10 @@ jobs:
         # Check out the pull request HEAD
         ref: ${{ github.event.pull_request.head.sha }}
     - name: Run go mod tidy
-      run: go mod tidy
+      run: |
+        go mod tidy
+        cd sub
+        go mod tidy
     - name: Commit changes
       uses: stefanzweifel/git-auto-commit-action@v4
       with:
