@@ -45,5 +45,5 @@ jobs:
       with:
         commit_message: Go tidiness for Dependabot PR
         commit_options: '--no-verify'
-        file_pattern: **/go.mod **/go.sum
+        file_pattern: '**/go.mod **/go.sum'
         disable_globbing: false
