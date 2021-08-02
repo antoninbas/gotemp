@@ -51,3 +51,4 @@ jobs:
         commit_options: '--no-verify'
         file_pattern: '**/go.mod **/go.sum'
         disable_globbing: false
+        commit_author: "github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
