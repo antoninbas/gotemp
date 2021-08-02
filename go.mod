@@ -2,4 +2,4 @@ module github.com/antoninbas/gotemp
 
 go 1.15
 
-require k8s.io/klog/v2 v2.8.0
+require k8s.io/klog/v2 v2.10.0
